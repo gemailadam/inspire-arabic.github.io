@@ -45,76 +45,14 @@
 <!-- end header and row -->
 <!-- danger don't use width with main or page classes -->
 <div class="row main-zxc">
-<div class="page-zxc col-lg-9 col-md-9 col-sm-9 col-xs-12">
-
-<?php
-
-
-$count_posts = wp_count_posts();
-$published_posts_count = $count_posts->publish;
-
-$count_qwe=1;
-
-if (have_posts()) 
-{
-while (have_posts()) 
-{
-the_post();
-echo '<div id="post-';the_ID();echo '"';post_class();echo '>';
-echo '<div class="postedby">';
-echo '<div class="wrap-index-zxc">';
-	echo '<h1 class="page-title-zxc"><a href="';the_permalink();echo '">';the_title();echo'</a></h1>';
-	// echo '<hr class="hr-h1"/>';
-
-echo '</div>';
-the_content();
-echo '</div>';
-// echo '<hr class="hr" />';
-echo '</div>';
-
-the_comment();
-}
-}
-
-previous_post_link( );?> &nbsp; <?php next_post_link( );
-?>
+<div class="page-zxc col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<!-- <h2 class="latest-zxc">احدث المقالات</h2> -->
+	<?php woocommerce_content(); ?>
 </div>
-<!-- end col and page popular-->
-
-<div class="sidebar-zxc col-lg-3 col-md-3 col-sm-3 col-xs-12">
-<?php dynamic_sidebar('sidebar-inspire'); ?>
-<h2>كتاب المقالات</h2>
-<ul>
-<?php wp_list_authors(); ?>
-</ul>
+<!--End  page-zxc-->
 </div>
-<!-- end col and sidebar-->
+<!--End Row and main -->
 
-</div>
-<!-- end main and row -->
-
-<!-- danger don't use width with footer or footer class -->
-<footer class="row footer-zxc">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<div class="footer-inspire">
-   <?php  dynamic_sidebar('footer-inspire' ); ?>
-   </div>
-   <div class="copyright">
-   <a href="http://www.inspireforweb.com/Support">&copy;حقوق التأليف والنشر هشام حسين<?php echo date('Y') ?> </a>
-	</div>
-</div>
-<!-- end col footer -->
-</footer>
-<!-- end footer and row -->
-
-</div>
-<!-- end container -->
-
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/inspire.js"></script>
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+<?php get_footer('script'); ?>

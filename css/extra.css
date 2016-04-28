@@ -1,0 +1,10 @@
+#search-2 {float: left;}
+#search-2{border-radius: 2%;position: absolute;top:0.3%;left: 0;}
+#search-2 input:nth-child(2){border-radius: 10px;border:1px solid #fff;box-shadow: inset 2px 2px 4px #000;}
+#search-2 input:last-child{border-radius: 0 10px 10px 0;border:0px solid #999;font-weight: bold;}
+#search-2 label{display: none;}
+
+
+.site-title-zxc p {vertical-align: top;line-height: 10%;}
+.single-post .type-post {margin-top: 0;padding-top: 0;}
+.single-post .wrap-image-zxc {margin: 1%;padding: 0;width: 8%;}

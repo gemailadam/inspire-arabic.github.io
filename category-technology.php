@@ -45,7 +45,7 @@
 <!-- end header and row -->
 <!-- danger don't use width with main or page classes -->
 <div class="row main-zxc">
-<div class="page-zxc col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="page-zxc col-lg-9 col-md-9 col-sm-9 col-xs-12">
 <h2 class="latest-zxc">احدث المقالات</h2>
 <?php
 
@@ -107,12 +107,26 @@ the_category();
 	}
 }
 
+echo '<div class="pagination-zxc">';
+the_posts_pagination( array(
+    'mid_size' => 1,
+    'prev_text' => __( 'PREV POSTS', 'textdomain' ),
+    'next_text' => __( 'NEXT POSTS', 'textdomain' ),
+) );
+echo '</div>';
 ?>
+
 </div>
 <!-- end col and page-->
 
 
-<div class="page-popular-zxc col-lg-5 col-md-5 col-sm-5 col-xs-12">
+<div class="sidebar-zxc col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<?php dynamic_sidebar('sidebar-inspire'); ?>
+</div>
+<!-- end col and sidebar-->
+
+
+<div class="page-popular-zxc col-lg-3 col-md-3 col-sm-3 col-xs-12">
 <h2 class="recent-zxc">المقالات الاكثر انتشارا</h2>
 <?php
 // To Display Most popular
@@ -174,27 +188,20 @@ the_category();
 
 	}
 }
-// echo '<div class="pagination-zxc">';
-// the_posts_pagination( array(
-//     'mid_size' => 1,
-//     'prev_text' => __( 'PREV POSTS', 'textdomain' ),
-//     'next_text' => __( 'NEXT POSTS', 'textdomain' ),
-// ) );
-// echo '</div>';
+
 
 // previous_posts_link( 'PREV POSTS' );next_posts_link( 'NEXT POSTS' );
 ?>
 </div>
 <!-- end col and page popular-->
 
-<div class="sidebar-zxc col-lg-3 col-md-3 col-sm-8 col-xs-12">
-<?php dynamic_sidebar('sidebar-inspire'); ?>
+<!-- <div class="writers-zxc">
 <h2>كتاب المقالات</h2>
 <ul>
 <?php wp_list_authors(); ?>
 </ul>
-</div>
-<!-- end col and sidebar-->
+</div> -->
+<!-- end class="writers-zxc"-->
 
 </div>
 <!-- end main and row -->

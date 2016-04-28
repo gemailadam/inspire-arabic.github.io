@@ -6,7 +6,7 @@
    <?php  dynamic_sidebar('footer' ); ?>
    </div>
    <div class="copyright">
-   <a href="http://www.inspireforweb.com/Support">&copy;copyright adam <?php echo date('Y') ?> </a>
+   <a href="http://www.inspireforweb.com/Support">&copy;copyright adam <?php echo date('Y') ?><?php fetchPostViews_zxc(get_the_ID()); ?></a>
 	</div>
 </div>
 <!-- end col footer -->
